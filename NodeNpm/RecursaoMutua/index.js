@@ -11,4 +11,4 @@ function walk(files){
         console.log(file)
     }
 }
-readDir()
+readDir('C:\Users\Usuario\Desktop\Git e Github\Meu Projetos\NodeJs')
