@@ -19,3 +19,4 @@ function readData(dados){
     dados = JSON.parse(dados)
     console.log(dados)
 }
+readArq(pathArq)
