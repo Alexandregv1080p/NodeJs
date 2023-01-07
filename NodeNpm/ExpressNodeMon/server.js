@@ -1,3 +1,9 @@
+//nesse capítulo, basicamente aprendemos a usar a atualziação automatica do NodeMon
+//para executarmos o NodeMon, usamos o seguinte trech o no terminalk
+//npm install nodemon --save-dev
+
+//para executa-lo
+//npx nodemon server.js
 const express = require('express')
 const app = express()
 
@@ -7,7 +13,7 @@ app.get('/',(req,res)=>{
     res.send(`
     <form action="/" method="POST">
     Nome: <input type="text" name="nome">
-    <button>Enviar</button>
+    <button>Enviar Formulario</button>
     </form>
     `)
 })
