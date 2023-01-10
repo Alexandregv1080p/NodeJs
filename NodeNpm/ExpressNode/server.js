@@ -1,3 +1,5 @@
+//para iniciarmos o node, daremos npm init -y
+//para instalarmos o express, será através do npm install express
 const express = require('express')
 const app = express()
 
@@ -7,7 +9,7 @@ app.get('/',(req,res)=>{
     res.send(`
     <form action="/" method="POST">
     Nome: <input type="text" name="nome">
-    <button>Enviar</button>
+    <button>Enviar Form</button>
     </form>
     `)
 })
