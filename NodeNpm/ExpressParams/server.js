@@ -11,10 +11,19 @@ app.get('/',(req,res)=>{
     </form>
     `)
 })
-app.get('/testes/:idUsuarios',(req,res)=>{
+//para trabalharmos com parametros de rota
+//utilizamos o uso dos ":"
+//o uso do "?", é para deixar como opcional
+app.get('/testes/:idUsuarios?/:usersTasks?',(req,res)=>{
     console.log(req.params)
-    res.send('Oi')
+    res.send(req.params)
 })
+
+app.get('/testes2/:usuarios?/:profile?',(req,res)=>{
+    console.log(req.query)
+    res.send(req.params)
+})
+
 app.post('/',(req,res)=>{
     res.send('Valor enviado!')
 })
