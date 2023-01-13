@@ -2,8 +2,8 @@
 
 const e = require('express')
 const rout = e.Router()
-const homeControll = require('./controllers/homeController')
-const contactControll = require('./controllers/contactController')
+const homeControll = require('./src/controllers/homeController')
+const contactControll = require('./src/controllers/contactController')
 
 // Rotas de home
 rout.get('/', homeControll.homePage)
