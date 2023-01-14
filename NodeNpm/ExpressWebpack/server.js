@@ -10,12 +10,14 @@ app.use(
     ),
     
 )
-//caminho absoluto para a pasta ejs
+//pasta para conteudo estático
+app.use(express.static(path.resolve(__dirname, 'public')))
+
 app.set('views',path.resolve(__dirname,'src','views'))
 
-//engine para renderizar arquivos ejs
+
 app.set('view engine','ejs')
-//necessario dar o comando npm i ejs
+
 
 
 app.use(routes)
