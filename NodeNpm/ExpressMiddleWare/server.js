@@ -2,6 +2,8 @@ const express = require('express')
 const app = express()
 const routes = require('./routes')
 const path = require('path')
+const {globalMidlleware} = require('./src/middlewares/middleware')
+
 app.use(
     express.urlencoded(
         {
@@ -15,6 +17,7 @@ app.use(express.static(path.resolve(__dirname, 'public')))
 
 app.set('views',path.resolve(__dirname,'src','views'))
 
+app.use(globalMidlleware)
 
 app.set('view engine','ejs')
 

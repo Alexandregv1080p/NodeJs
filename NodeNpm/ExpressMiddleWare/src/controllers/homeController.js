@@ -1,7 +1,12 @@
-//controllers são encarregados de guardar as funções
-exports.homePage = (req,res)=>{
-    res.render('index')//vai renderizar o arquivo ejs
+exports.homePage = (req,res,next)=>{
+    res.render('index')
 }
+/* exports.homePage = (req,res,next)=>{
+    console.log(`Olha oq está no meu req.session.nome: ${req.session.nome}`)
+    console.log('Respondi o cliente')
+    res.render('index')//vai renderizar o arquivo ejs
+    next(); //aqui invocamos o middleware
+} */
 exports.dealPost = (req,res)=>{
-    res.send('Ei, sou a tua nova rota')
+    res.send(req.body)
 }
